@@ -38,3 +38,18 @@ var personProto = {
 var luan = Object.create(personProto)
 luan.name = 'Luan'
 luan.job = 'Software'
+
+//object share the same space in memory
+
+var obj1 = {
+    name:"luan",
+    age: 28
+}
+
+var obj2 = obj1
+obj1.age = 30
+console.log(obj1.age)
+console.log(obj2.age)
+
+
+//if you pass an object to a function, every change that you'll make reflect in the object outside
