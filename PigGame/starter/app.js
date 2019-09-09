@@ -11,10 +11,10 @@ GAME RULES:
 
 var dice;
 
+init()
 var activePlayer = 0;
-var scores = [0,0];
+var scores = [0, 0];
 var roundScore = 0;
-
 
 // document.querySelector('#current-' + activePlayer).textContent = dice
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'
@@ -23,11 +23,6 @@ var roundScore = 0;
 // console.log(x);
 
 
-document.querySelector('.dice').style.display = 'none'
-document.getElementById('score-0').textContent = '0'
-document.getElementById('score-1').textContent = '0'
-document.getElementById('current-1').textContent = '0'
-document.getElementById('current-0').textContent = '0'
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
     
@@ -64,3 +59,19 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     if(scores[activePlayer] >= 100) document.querySelector('#name-' +activePlayer).textContent = "WINEEER"
 
 })
+
+document.querySelector('.btn-new').addEventListener('click', init)
+
+function init() {
+    var activePlayer = 0;
+    var scores = [0, 0];
+    var roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none'
+    document.getElementById('score-0').textContent = '0'
+    document.getElementById('score-1').textContent = '0'
+    document.getElementById('current-1').textContent = '0'
+    document.getElementById('current-0').textContent = '0'
+    document.querySelector('#name-0').textContent = "Player 1"
+    document.querySelector('#name-1').textContent = "Player 2"
+}
