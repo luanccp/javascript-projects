@@ -1,3 +1,4 @@
+/*
 var john = {
     name:'Luan',
     job:'Software Engineer'
@@ -24,3 +25,16 @@ var luan = new Person('Luan2', 'crazy')
 
 luan.calculate()
 console.log(luan.lastName)
+*/
+
+//Object create
+
+var personProto = {
+    calculate: function(){
+        console.log("Funcao calculate")
+    }
+}
+
+var luan = Object.create(personProto)
+luan.name = 'Luan'
+luan.job = 'Software'
