@@ -94,7 +94,7 @@ console.log(rates);
 */
 
 /////////////////////////////
-// Lecture: Functions returning functions
+// Functions returning functions
 
 function interviewQuestion(job) {
     if (job === 'designer') {
@@ -112,3 +112,12 @@ function interviewQuestion(job) {
     }
 }
 interviewQuestion('teacher')('Mark');
+
+
+////IIFE (Imediatily Invoked Function Expression)
+(function (goodLuck) {
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+
+//we cannot access store out of the function
